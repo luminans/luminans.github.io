@@ -1,0 +1,75 @@
+.h1 {
+    margin: 30px 0 0;
+    font-size:16px;
+    font-family:serif;
+}            
+
+.container {
+    padding-bottom: 20px;
+}
+
+.jumbotron {
+    position: relative;
+}
+
+.jumbotron::after {
+    content: "";
+    background-image: url('../images/worldprimitives.jpg');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    min-height: 130vh;
+    max-height: 150vh;
+    max-width: 250vh;
+    display: flex;
+    align-items: center;
+    z-index: -1; 
+}
+
+.title-row {   
+    margin-bottom:20px;
+}
+
+.aboutstart:first-child:first-letter {
+    float: left;
+    font-family: serif;
+    font-size: 44px;
+    line-height: 32px;
+    padding-top: 4px;
+    padding-right: 2px;
+    padding-left: 3px;
+}
+
+.crossed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#contact_pane {
+    background-image: url('../images/pencils.jpg');
+    background-size: cover;
+    /* min-height: 100vh; */
+    padding-bottom: 20px;
+}
+
+#footer_pane {
+    padding-top: 15px;
+    background-color: black;
+    color: grey;
+    padding-bottom: 20px;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+
+.help-block {
+    font-weight: bold;
+    background-color:bisque;
+    color:crimson;
+}

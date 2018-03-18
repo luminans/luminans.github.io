@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hangul Acquisition System</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Hangul, Hundlism, Sejong, acquisition" />
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/letter.css" />
+        <link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/section.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type = "text/javascript" src = "js/modernizr.custom.js"></script>
+
+        <script src = "js/renderSyllable.js"></script>
+        <script src = "js/LetterSyllable.js"></script>
+        <script src = "js/AnimateSyllable.js"></script>
+        <script src = "js/DecodeSyllable.js"></script>
+        <script src = "js/SpeakSyllable.js"></script>
+
+        <object id="svgGraphoneme" data="images/letters.svg" type="image/svg+xml" height="0" width="150">
+            Your browser doesn't support SVG
+        </object>
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target="#myNavbar" data-offset="70">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html#page-top"><img src="images/hundlipattern.svg" style="height:40px;position:relative;top:-8px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html#sessions">SESSIONS</a>
+                        </li>
+                        <li>
+                            <a href="index.html#about">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <article class="article">
+            <div class="container">
+                <div class="row title-row">
+                    <div class="col-md-12">
+                        <a class="anchor" id="sessions"></a>
+                        <h1>PRIMITIVE LETTERS</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-center">TRILATERAL SYLLABLE</h4>
+                        <p>The Hundli theory and pattern can transform back and forth the trilateral structures between a speech syllable in time and a graphic syllable on paper (FIG. 1a and b). The graphic syllable places the opening (<sup>&lt;</sup>&#9711;), lasting (ㅢ), and closing (&#9711;<sub>&gt;</sub>) letters vertically to the top, middle, and bottom of a syllable block, respectively. Here &#9711; and ㅢ denote an arbitrary consonant and vowel, respectively. In the pre-superscript and subscript of &#9711;, the angle brackets, i.e., &lt; and &gt;, distinguish the opening and closing sounds. This template of a graphic syllable is named /ɨŋ/ in IPA or simply wing by the phonetic similarity as we read it in Hangul. Note that fat, tall, and big vowels having ㅡ, ㅣ, and both, respectively, are placed to the bottom, right, and both of <sup>&lt;</sup>&#9711;. The opening and lasting letters are essential in a graphic syllable while only lasting sound is essential in a speech syllable. In a graphic syllable, ㅇ is placed in <sup>&lt;</sup>&#9711; if its opening sound is silent while &#9711;<sub>&gt;</sub> is omitted if its closing sound is silent.</p>
+                        <figure class="figure figure-center" >
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <object class="figuresyllable" data="images/syllablespeech.svg" type="image/svg+xml">
+                                                Your browser doesn't support SVG
+                                            </object>
+                                        </td>
+                                        <td style="border:none">
+                                            <object class="figuresyllable" data="images/syllablegraphic.svg" type="image/svg+xml">
+                                                Your browser doesn't support SVG
+                                            </object>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:none">(a) Speech Syllable</td>
+                                        <td style="border:none">(b) Graphic Syllable</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption id="speechgraphicsyllables">Speech and Graphic Syllables</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center">PRIMITIVE VOWELS</h4>
+                        <p>For the primitive vowels, the geometric primitives outline the vibrant articulators of their sounds, i.e., [ʌ], [ɯ], and [i], in FIG. 2. First, the dot (ㆍ) characterizes the vibrant palate in FIG. 2c when [ʌ] is produced at the middle height of the jaw. Second, the horizontal line (ㅡ) characterizes the flat of the vibrant tongue in FIG. 2b when [ɯ] is produced at the minimal height of the jaw. Third, the vertical line (ㅣ) characterizes vibrant open sides of the raised tongue back in FIG. 2a when [i] is produced at the minimal height of the jaw. They form the tripod of all diverging, converging, and iotized vowels in Hangul.</p>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <th style="text-align:center; border:none">(a)ㅣ for [i]</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulate fonleft" id="fonleft01" src="images/speech01.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulate fonleft" id="fonleft03" src="images/speech03.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <img class="articulate fonleft" id="fonleft02" src="images/speech02.svg"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">(b) ㅡ for [ɯ]</th>
+                                        <th style="text-align:center; border:none">(c) ㆍ for [ʌ]</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Lasting Sounds</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-center">OPENING SOUNDS</h4>
+                        <p>For primitive opening sounds, the basic shapes outline the articulators of their sounds, i.e., [ɯ], [m], and [s]. A circle, square, and triangle characterize the round throat, square lips, and sharp teeth (FIG. 3). Soft airflow from a relaxed larynx with no tension produces [ɯ] (FIG. 3c or FIG. 2b). This articulation defines the reference state where an opening articulation ends. For example, the opening lips that articulate from the shutting lips to the reference point produce their opening sound, i.e., [m], instantly by escaping air through them (FIG. 3b). The opening teeth with the tongue tip from FIG. 3a to c produces the opening [s].</p>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <th style="text-align:center; border:none">(a) ㅅ</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulate fonleft" id="fonleft82" src="images/speech82.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulate fonleft" id="fonleft81" src="images/speech81.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <img class="articulate fonleft" id="fonleft80" src="images/speech80.svg"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">(b) ㅁ</th>
+                                        <th style="text-align:center; border:none">(c) ㅇ</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption id="openingconsonants">Primitive Opening Sounds</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center">CLOSING SOUNDS</h4>
+                        <p>Reverse articulation of an opening sound, if possible, defines the closing sound whose letter reuses the opening letter (FIG. 4). Note that the throat cannot close the vocal tract so that its closing sound is not applicable (FIG. 4c). However, this articulation defines the reference state where a closing articulation starts. For example, the closing lips that articulate from FIG. 4c to b produce their nasal sound, i.e., the closing [m], by escaping air through nasal tract. The teeth can close the oral tract airtight together with the tongue tip and produce their closing sound, i.e., the closing [s] (FIG. 4a).</p>
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <th style="text-align:center; border:none">(a) ᆺ</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulate fonleft" id="fonleftc2" src="images/speech82.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulate fonleft" id="fonleftc1" src="images/speech81.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="fonleft" id="closingthroatysound" viewbox="0 0 100 78">
+                                                <path d="M0,0 L100,78 M 100,0 L0,78" stroke="red" stroke-width="3"/>
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">(b) ᆷ</th>
+                                        <th style="text-align:center; border:none">(c) ᆼ</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Primitive Closing Sounds</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row title-row">
+                    <div class="col-md-12 text-center">
+                        <a class="anchor" id="primitivesyllables"></a>
+                        <h1>PRIMITIVE SYLLABLES</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-center">Primitive Open Syllables</h4>
+                        <p>All combinations of three primitive opening and lasting sounds populate the primitive open syllables.</p>
+                        <table class="table">
+                            <thead>
+                                <tr class="doublebottom horizontal">
+                                    <th class="vertical"> 
+                                        <span class="syltab">ㅁ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅅ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅇ</span>
+                                    </th>
+                                    <td class="doubleleft vertical diagonalRising">
+                                        <span class="left">Open.</span><br>
+                                        <span class="right">Last.</span>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align:center">
+                                <tr>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab">ㆍ</span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="vertical">
+                                        <span class="syltab">미</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">시</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">이</span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab">ㅣ</span>
+                                    </th>
+                                </tr>
+                                <tr class="horizontal">
+                                    <td class="vertical">
+                                        <span class="syltab">므</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">스</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">으</span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab">ㅡ</span>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech fonleft" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center">Primitive Closed Syllables</h4>
+                        <p>All combinations of three primitive lasting and closing sounds populate the primitive open syllables.</p>
+                        <table class="table">
+                            <thead>
+                                <tr class="doublebottom horizontal">
+                                    <th class="vertical">
+                                        <span class="syltab">ㆍ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅡ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅣ</span>
+                                    </th>
+                                    <td class="doubleleft vertical diagonalRising">
+                                        <span class="left">Last.</span><br>
+                                        <span class="right">Clos.</span>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align:center">
+                                <tr>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">음</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">임</span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab">ᆷ</span>
+                                    </th>
+                                </tr>
+                                <tr class="horizontal">
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">읏</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">잇</span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab">ᆺ</span>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech fonleft" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-center">Closed Syllables by ㅁ</h4>
+                        <p>All combinations of three primitive vowels and consonants populate the primitive syllables.</p>
+
+                        <table class="table">
+                            <thead>
+                                <tr class="doublebottom horizontal">
+                                    <th class="vertical">
+                                        <span class="syltab">ㅁ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅅ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅇ</span>
+                                    </th>
+                                    <td class="doubleleft vertical diagonalRising">
+                                        <span class="left">Open.</span><br>
+                                        <span class="right">Rhym.</span>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align:center">
+                                <tr>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="vertical">
+                                        <span class="syltab">밈</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">심</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">임</span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab">임</span>
+                                    </th>
+                                </tr>
+                                <tr class="horizontal">
+                                    <td class="vertical">
+                                        <span class="syltab">믐</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">슴</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">음</span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab">음</span>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech fonleft" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center">Closed Syllables by ㅅ</h4>
+                        <p>All combinations of three primitive vowels and consonants populate the primitive syllables.</p>
+
+                        <table class="table">
+                            <thead>
+                                <tr class="doublebottom horizontal">
+                                    <th class="vertical">
+                                        <span class="syltab">ㅁ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅅ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅇ</span>
+                                    </th>
+                                    <td class="doubleleft vertical diagonalRising">
+                                        <span class="left">Open.</span><br>
+                                        <span class="right">Rhym.</span>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align:center">
+                                <tr class="horizontal">
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="vertical">
+                                        <span class="syltab">밋</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">싯</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">잇</span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab">잇</span>
+                                    </th>
+                                </tr>
+                                <tr class="horizontal">
+                                    <td class="vertical">
+                                        <span class="syltab">믓</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">슷</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">읏</span>
+                                    </td>
+                                    <th class="doubleleft vertical">
+                                        <span class="syltab">읏</span>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech fonleft" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row title-row">
+                    <div class="col-md-12 text-center">
+                        <a class="anchor" id="primitiveletternames"></a>
+                        <h1>LETTER NAMES</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-center">Vowel Names</h4>
+                        <p>The vowels are named by their speech sounds.</p>
+                        <table class="table">
+                            <thead>
+                                <tr class="doublebottom horizontal">
+                                    <th class="doubleright vertical">Primitive Vowels</th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㆍ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅡ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅣ</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align:center">
+                                <tr class="horizontal">
+                                    <td class="doubleright vertical">Vowel Names</td>
+                                    <td class="vertical">
+                                        <span class="syltab"><font face="새굴림"></font></span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">으</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">이</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center">Consonant Names</h4>
+                        <p>The consonant names include their opening and closing sounds.</p>
+                        <table class="table">
+                            <thead>
+                                <tr class="doublebottom horizontal">
+                                    <th class="doubleright vertical">Primitive Consonants</th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅁ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅅ</span>
+                                    </th>
+                                    <th class="vertical">
+                                        <span class="syltab">ㅇ</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align:center">
+                                <tr>
+                                    <td class="doubleright vertical">Consonant Names</td>
+                                    <td class="vertical">
+                                        <span class="syltab">므음</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">스읏</span>
+                                    </td>
+                                    <td class="vertical">
+                                        &nbsp;&nbsp;
+                                        <span class="syltab">으</span>
+                                        &nbsp;&nbsp;
+                                    </td>
+                                </tr>
+                                <tr class="horizontal">
+                                    <td class="doubleright vertical">Short Names</td>
+                                    <td class="vertical">
+                                        <span class="syltab">믐</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">슷</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">으</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div id="footer_pane" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy; Taemin Kim 2017</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+    </body>
+</html>

@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hangul Acquisition System</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Hangul, Hundlism, Sejong, acquisition" />
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/letter.css" />
+        <link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/section.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type = "text/javascript" src = "js/modernizr.custom.js"></script>
+
+        <script src = "js/renderSyllable.js"></script>
+        <script src = "js/LetterSyllable.js"></script>
+        <script src = "js/AnimateSyllable.js"></script>
+        <script src = "js/DecodeSyllable.js"></script>
+        <script src = "js/SpeakSyllable.js"></script>
+
+        <object id="svgGraphoneme" data="images/letters.svg" type="image/svg+xml" height="0" width="150">
+            Your browser doesn't support SVG
+        </object>
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target="#myNavbar" data-offset="70">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html#page-top"><img src="images/hundlipattern.svg" style="height:40px;position:relative;top:-8px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html#sessions">SESSIONS</a>
+                        </li>
+                        <li>
+                            <a href="index.html#about">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <article class="article">
+            <div class="container">
+                <div class="row title-row">
+                    <div class="col-md-12 text-center">
+                        <a class="anchor" id="hangulwing"></a>
+                        <h1>HANGUL WING</h1>
+                        <p>Hangul Wing compactly organizes important letters in vowel and consonant tables according to the Hangul formation process. Like a fixed wing, it illustrates three different forms of graphic syllables with its Hangul name at the fuselage and cubistically unfolds the multi-dimensional phoneme spaces on both wings. The vowel table preceding the consonant table emphasizes its significance in a syllable. Letter names remind us their phonetic values and syllabic compositions. Opening and closing sounds are named by open and closed syllables combining them with ㅡ before and after, respectively.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-center">VOWEL WING</h4>
+                        <p>A vowel pictograph ( ) bears an iotized vowel letter by adding a dot or vertical line ( ) to it and a composite vowel letter combines two graphemes ( ). Note that   as a graphic syllable for /i/ reminds us the iotized vowel. The dot and vertical line in   remind us the letter designs for pre-iotized and post-iotized vowels, respectively.</p>
+                        <table class="table">
+                            <caption>Vowel Table</caption>
+
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" class="vertical">
+                                        <span class="cyltab">Pre-iotized</span> 
+                                    </th>
+                                    <th colspan="2" class="doubleleft vertical">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span class="cyltab">Basic</span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </th>
+                                    <th colspan="2" class="doubleleft vertical">
+                                        <span class="cyltab">Primtive</span>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody style="text-align:center">
+                                <tr class="horizontal">
+                                    <td class="vertical">
+                                        <span class="syltab">ㅕ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㅑ</span>
+                                    </td>
+                                    <td class="doubleleft vertical">
+                                        <span class="syltab">ㅓ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㅏ</span>
+                                    </td>
+                                    <td class="doubleleft vertical">
+                                        <span class="syltab">ㅣ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab"></span>
+                                    </td>
+                                </tr>
+                                <tr class="doublebottom horizontal">
+                                    <td class="vertical">
+                                        <span class="syltab">ㅠ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㅛ</span>
+                                    </td>
+                                    <td class="doubleleft vertical">
+                                        <span class="syltab">ㅜ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㅗ</span>
+                                    </td>
+                                    <td class="doubleleft vertical">
+                                        <span class="syltab">ㅡ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㆍ</span>
+                                    </td>
+                                </tr>
+                                <tr class="horizontal">
+                                    <td class="vertical">
+                                        <span class="syltab">ㅖ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㅒ</span>
+                                    </td>
+                                    <td class="doubleleft vertical">
+                                        <span class="syltab">ㅔ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㅐ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="cyltab">Post-iotized</span> 
+                                    </td>
+                                </tr>
+                                <tr class="horizontal">
+                                    <td class="vertical">
+                                        <span class="syltab">ㅟ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㅚ</span>
+                                    </td>
+                                    <td class="doubleleft vertical">
+                                        <span class="syltab">ㅟ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㅚ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㅢ</span>
+                                    </td>
+                                    <td class="vertical">
+                                        <span class="syltab">ㆎ</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center">CONSONANT WING</h4>
+                        <p>A consonant pictograph (ㅇ) bears a derivative letter (ㆆ) by adding a stroke on it and a composite consonant letter combines two graphemes (ᅇ). For example, ㅎ denotes the second derivative of ㅇ by the burst strength and the homogeneous digraph of a lax sound denotes its tensed sound.</p>
+
+                        <table class="table">
+                            <caption>Consonant Table</caption>
+
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr class="doublebottom">
+                                    <th colspan="2" class="vertical">
+                                        <span class="cyltab">ㅁ</span> 
+                                    </th>
+                                    <th colspan="2" class="vertical">
+                                        <span class="cyltab">ㅅ</span> 
+                                    </th>
+                                    <th colspan="2" class="vertical">
+                                        <span class="cyltab">ㄴ</span> 
+                                    </th>
+                                    <th colspan="2" class="vertical">
+                                        <span class="cyltab">&nbsp;&nbsp;❘</span>
+                                    </th>
+                                    <th colspan="2" class="vertical">
+                                        <span class="cyltab">ㅇ</span> 
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody style="text-align:center">
+                                <tr class="horizontal">
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㅁ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㅅ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㄴ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㆁ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㅇ</span>
+                                    </td>
+                                </tr>
+                                <tr class="horizontal">
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㅂ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㅈ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㄷ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㄱ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ᅙ</span>
+                                    </td>
+                                </tr>
+                                <tr class="doublebottom horizontal">
+                                    <td colspan="2" class="vertical">
+                                        &nbsp;&nbsp;&nbsp;
+                                        <span class="syltab">ㅍ</span>
+                                        &nbsp;&nbsp;&nbsp;
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        &nbsp;&nbsp;&nbsp;
+                                        <span class="syltab">ㅊ</span>
+                                        &nbsp;&nbsp;&nbsp;
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        &nbsp;&nbsp;&nbsp;
+                                        <span class="syltab">ㅌ</span>
+                                        &nbsp;&nbsp;&nbsp;
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㅋ</span>
+                                    </td>
+                                    <td colspan="2" class="vertical">
+                                        <span class="syltab">ㅎ</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan = "2">
+                                    </td>
+                                    <td colspan = "2">
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td colspan = "2" class="vertical">
+                                        <span class="syltab">ㄹ</span>
+                                    </td>
+                                    <td colspan = "2">
+                                        <span class="syltab">&nbsp;</span>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech fonleft" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div id="footer_pane" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy; Taemin Kim 2017</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+    </body>
+</html>

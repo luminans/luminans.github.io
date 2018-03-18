@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hangul Acquisition System</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Hangul, Hundlism, Sejong, acquisition" />
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/letter.css" />
+        <link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/section.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type = "text/javascript" src = "js/modernizr.custom.js"></script>
+
+        <script src = "js/renderSyllable.js"></script>
+        <script src = "js/LetterSyllable.js"></script>
+        <script src = "js/AnimateSyllable.js"></script>
+        <script src = "js/DecodeSyllable.js"></script>
+        <script src = "js/SpeakSyllable.js"></script>
+
+        <object id="svgGraphoneme" data="images/letters.svg" type="image/svg+xml" height="0" width="150">
+            Your browser doesn't support SVG
+        </object>
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target="#myNavbar" data-offset="70">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html#page-top"><img src="images/hundlipattern.svg" style="height:40px;position:relative;top:-8px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html#sessions">SESSIONS</a>
+                        </li>
+                        <li>
+                            <a href="index.html#about">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <article class="article">
+            <div class="container">
+                <div class="row title-row">
+                    <div class="col-md-12 text-center">
+                        <a class="anchor" id="primitivesyllables"></a>
+                        <h1>COMPOSITE VOWELS</h1>
+                        <p>A composite vowel forms a big vowel as its sound forms a complex vowel in vowel harmony, i.e., a leading heavy fat vowel followed by its adjacent light tall vowel (TABLE 1). For example, ㅘ for [wɑ], a composite of ㅗ and ㅏ, is pronounced by releasing pursed lips for ㅗ quickly and opening the mouth for ㅏ as their articulations are close enough to have the same phonetic flow. Thus pronunciation efficiency and articulation economy explain the vowel harmony in labial and palatal on-glides to reduce articulatory movements.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-center">COMPOSITE VOWELS</h4>
+                        <p>Composite vowels of simple vowels are effective.</p>
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <caption>Composite of Simple Vowels</caption>
+
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr class="doublebottom horizontal">
+                                        <th class="vertical">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span>Simple</span> 
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                        </th>
+                                        <th class="vertical">
+                                            <span>Composite</span> 
+                                        </th>
+                                        <th class="doubleleft vertical">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span>Simple</span> 
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                        </th>
+                                        <th class="vertical">
+                                            <span>Composite</span> 
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅓ</span>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td rowspan="2" class="doubleleft vertical">
+                                            <span class="syltab">ㅏ</span>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅝ</span>
+                                        </td>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅘ</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅜ</span>
+                                        </td>
+                                        <td rowspan="2" class="doubleleft vertical">
+                                            <span class="syltab">ㅗ</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅞ</span>
+                                        </td>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅙ</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="horizontal">
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅔ</span>
+                                        </td>
+                                        <td rowspan="2" class="doubleleft vertical">
+                                            <span class="syltab">ㅐ</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </figure>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center">OBSOLETE COMPOSITE VOWELS*</h4>
+                        <p>Composite vowels of pre-iotized vowels became obsolete.</p>
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <caption>Composite of Pre-iotized Vowels</caption>
+
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr class="doublebottom horizontal">
+                                        <th class="vertical">
+                                            <span>Pre-iotized</span> 
+                                        </th>
+                                        <th class="vertical">
+                                            <span>Composite</span> 
+                                        </th>
+                                        <th class="doubleleft vertical">
+                                            <span>Pre-iotized</span> 
+                                        </th>
+                                        <th class="vertical">
+                                            <span>Composite</span> 
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅕ</span>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td rowspan="2" class="doubleleft vertical">
+                                            <span class="syltab">ㅑ</span>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ᆑ</span>
+                                        </td>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ᆄ</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅠ</span>
+                                        </td>
+                                        <td rowspan="2" class="doubleleft vertical">
+                                            <span class="syltab">ㅛ</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ᆒ</span>
+                                        </td>
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ᆅ</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="horizontal">
+                                        <td rowspan="2" class="vertical">
+                                            <span class="syltab">ㅖ</span>
+                                        </td>
+                                        <td rowspan="2" class="doubleleft vertical">
+                                            <span class="syltab">ㅒ</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </figure>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+
+                        <svg class="crossed" width="100%" height="100%" viewbox="0 0 100 100">
+                            <path d="M0,0 L100,100 M 100,0 L0,100" stroke="red" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div id="footer_pane" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy; Taemin Kim 2017</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+    </body>
+</html>

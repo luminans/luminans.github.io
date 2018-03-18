@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hangul Acquisition System</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Hangul, Hundlism, Sejong, acquisition" />
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/letter.css" />
+        <link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/section.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type = "text/javascript" src = "js/modernizr.custom.js"></script>
+
+        <script src = "js/renderSyllable.js"></script>
+        <script src = "js/LetterSyllable.js"></script>
+        <script src = "js/AnimateSyllable.js"></script>
+        <script src = "js/DecodeSyllable.js"></script>
+        <script src = "js/SpeakSyllable.js"></script>
+        <script src = "js/hangul.js"></script>
+
+        <object id="svgGraphoneme" data="images/letters.svg" type="image/svg+xml" height="0" width="150">
+            Your browser doesn't support SVG
+        </object>
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target="#myNavbar" data-offset="70">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html#page-top"><img src="images/hundlipattern.svg" style="height:40px;position:relative;top:-8px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html#sessions">SESSIONS</a>
+                        </li>
+                        <li>
+                            <a href="index.html#about">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <article class="article">
+            <div class="container">
+                <div class="row title-row">
+                    <div class="col-md-12 text-center">
+                        <a class="anchor" id="primitivesyllables"></a>
+                        <h1>IOTIZED VOWELS</h1>
+                        <p>The iotized vowel letters add a dot or a vertical line to their base letters. There are two types of iotation depending on the occurrence of ㅣ: pre-iotation (pre-occurrence of the sound ㅣ) and post-iotation (post-occurrence of the letter ㅣ).</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-center">POST-IOTIZED VOWELS</h4>
+                        <p>The raised tongue back modulates all pictographic vowels except ㅣ into their post-iotized vowels, whose letters are denoted by adding ㅣ to the right of their base letters (TABLE 1). For example, ㅐ for [æ] and ㅔ for [e] are the post-iotized vowels of [ɑ] and [ə], respectively.</p>
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <caption>Post-iotized Vowels</caption>
+
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr class="doublebottom horizontal">
+                                        <th colspan="2" class="vertical">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span>Basic Vowels</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                        </th>
+                                        <th colspan="2" class="vertical">
+                                            <span>Primitive Vowels</span> 
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align:center">
+                                    <tr class="horizontal">
+                                        <td class="vertical">
+                                            <span class="syltab">ㅓ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅏ</span>
+                                        </td>
+                                        <td>
+                                            <span class="syltab">ㅣ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab"></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="doublebottom horizontal">
+                                        <td class="vertical">
+                                            <span class="syltab">ㅜ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅗ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅡ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㆍ</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="horizontal">
+                                        <td class="vertical">
+                                            <span class="syltab">ㅔ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅐ</span>
+                                        </td>
+                                        <td colspan="2" class="vertical">
+                                            <span class="syltab">Post-iotized</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="horizontal">
+                                        <td class="vertical">
+                                            <span class="syltab">ㅟ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅚ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅢ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㆎ</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </figure>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech fonleft" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+                        <p>Sometimes, big post-iotized vowels, i.e., ㅢ, ㅚ, and ㅟ, are diphthongized to [ɨi], [we], and [wi], respectively.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center">PRE-IOTIZED VOWELS</h4>
+                        <p>The pre-iotized vowels of simple vowels are their palatal on-glides with [j], whose letters are denoted by adding a dot beside the existing dot of their base letters (TABLE 3). For example, ㅑ for [jɑ] and ㅕ for [jə] are the pre-iotized versions of ㅏ and  ㅓ, respectively.</p>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <caption>Pre-iotized Vowels</caption>
+
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr class="doublebottom horizontal">
+                                        <th colspan="2" class="vertical">
+                                            <span>Pre-iotized Vowels</span> 
+                                        </th>
+                                        <th colspan="2" class="doubleleft vertical">
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span>Basic Vowels</span>
+                                            &nbsp;&nbsp;&nbsp; 
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align:center">
+                                    <tr class="horizontal">
+                                        <td class="vertical">
+                                            <span class="syltab">ㅕ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅑ</span>
+                                        </td>
+                                        <td class="doubleleft vertical">
+                                            <span class="syltab">ㅓ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅏ</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="horizontal">
+                                        <td class="vertical">
+                                            <span class="syltab">ㅠ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅛ</span>
+                                        </td>
+                                        <td class="doubleleft vertical">
+                                            <span class="syltab">ㅜ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅗ</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="horizontal">
+                                        <td class="vertical">
+                                            <span class="syltab">ㅖ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅒ</span>
+                                        </td>
+                                        <td class="doubleleft vertical">
+                                            <span class="syltab">ㅔ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅐ</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="horizontal">
+                                        <td class="vertical">
+                                            <span class="syltab">ᆔ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ᆈ</span>
+                                        </td>
+                                        <td class="doubleleft vertical">
+                                            <span class="syltab">ㅟ</span>
+                                        </td>
+                                        <td class="vertical">
+                                            <span class="syltab">ㅚ</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </figure>
+
+                        <figure class="figure figure-center">
+                            <table class="table">
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td style="border:none">
+                                            <img class="articulatespeech fonleft" src="images/speech00.svg"/>
+                                        </td>
+                                        <td style="border:none">
+                                            <svg class="letterformation" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:center; border:none">Speech Production</th>
+                                        <th style="text-align:center; border:none">Letter Formation</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <figcaption>Sound and Letter Formation</figcaption>
+                        </figure>
+
+                        <p>ᆔ and ᆈ are obsolete but they were used only for Chinese transcription.</p>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div id="footer_pane" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy; Taemin Kim 2017</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+    </body>
+</html>
