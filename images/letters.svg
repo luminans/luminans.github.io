@@ -726,7 +726,7 @@
        id="layer132"
        transform="translate(300,500)"
        inkscape:label="ᇰ">
-        <path d="M 70,5 v 30"
+        <path d="M 50,5 v 10 M 50,15 A20,10 0 1,0 50,35 A20,10 0 1,0 50,15"
               id="hangul84" />
     </g>
     <g
