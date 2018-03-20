@@ -208,33 +208,38 @@ function char2syllable(char) {
     return syllable;
 }
 
+var isIdleArticulation = true;
+
 $(document).ready(function(){
     $(".syltab").click(function() {
-        var char = this.innerText.charCodeAt(0),
-            hex = char.toString(16),
-            innerText = this.innerText,
-            syllable = char2syllable(char), 
-            container = $(this).closest(".col-md-6"),
-            img = (container.find(".articulatespeech"))[0],
-            svg = (container.find(".letterformation"))[0];
-        renderSound(syllable[0], syllable[1], syllable[2]);
+        if (isIdleArticulation) {
+            isIdleArticulation = false;
+            var char = this.innerText.charCodeAt(0),
+                hex = char.toString(16),
+                innerText = this.innerText,
+                syllable = char2syllable(char), 
+                container = $(this).closest(".col-md-6"),
+                img = (container.find(".articulatespeech"))[0],
+                svg = (container.find(".letterformation"))[0];
+            renderSound(syllable[0], syllable[1], syllable[2]);
 
-        if (img !== null) { renderSpeech(img, syllable[0], syllable[1], syllable[2]); }
-        if (svg !== null) { insertPaths4Syllable(svg, syllable[0], syllable[1], syllable[2]); }
-        if (syllable[0] && syllable[1]) {
-            var snd_name = 'sounds/sound';
-            syllable.forEach(function (speech) {
-                var hex_name = speech.toString(16).padStart(2, '0');
-                snd_name = snd_name + hex_name;
-            });
-            snd_name = snd_name + '.ogg';
+            if (img !== null) { renderSpeech(img, syllable[0], syllable[1], syllable[2]); }
+            if (svg !== null) { insertPaths4Syllable(svg, syllable[0], syllable[1], syllable[2]); }
+            if (syllable[0] && syllable[1]) {
+                var snd_name = 'sounds/sound';
+                syllable.forEach(function (speech) {
+                    var hex_name = speech.toString(16).padStart(2, '0');
+                    snd_name = snd_name + hex_name;
+                });
+                snd_name = snd_name + '.ogg';
 
-            setTimeout(function() {
-                speak(innerText);
+                setTimeout(function() {
+                    speak(innerText);
 
-                var audio = new Audio(snd_name);
-                audio.play();
-            }, 1500); // Delay 200ms. Otherwise, some syllalbes are broken.
+                    var audio = new Audio(snd_name);
+                    audio.play();
+                }, 1500); // Delay 200ms. Otherwise, some syllalbes are broken.
+            }
         }
     });
     $(".syltab").mouseenter(function() {

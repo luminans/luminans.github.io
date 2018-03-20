@@ -130,7 +130,8 @@ function renderSpeech(canvas, opening, lasting, closing) {
         }, speech[0]);
     });
     setTimeout(function () {
-        canvas.src = original; 
+        canvas.src = original;
+        isIdleArticulation = true;
     }, syllable.slice(-1)[0][0]);
 }
 
