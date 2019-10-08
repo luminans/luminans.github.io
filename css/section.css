@@ -15,15 +15,9 @@
 .jumbotron::after {
     content: "";
     background-image: url('../images/worldprimitives.jpg');
-    background-size: cover;
-    text-align: center;
-    color: white;
-    min-height: 130vh;
-    max-height: 150vh;
-    max-width: 250vh;
+    background-size: 100% 100%;
+    min-height: 60vh;
     display: flex;
-    align-items: center;
-    z-index: -1; 
 }
 
 .title-row {   
