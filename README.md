@@ -48,6 +48,51 @@ A modern, interactive Korean Hangul learning system with enhanced audio pronunci
 
 ## 🛠 Technical Improvements
 
+- **Unit Testing** - Comprehensive test coverage for JavaScript functions
+- **Modular code** - Separation of concerns for better maintainability
+- **Build process** - Optimized deployment without test files
+- **Performance optimizations** - Faster loading and rendering
+- **Code quality** - Modern JavaScript practices and patterns
+
+## 🧪 Testing
+
+The project includes comprehensive unit tests for all JavaScript functions. Tests are kept separate from deployment code.
+
+### Running Tests
+
+```bash
+# Install dependencies
+npm install
+
+# Run all tests
+npm test
+
+# Run tests in watch mode during development
+npm run test:watch
+```
+
+### Test Coverage
+
+Test coverage reports are generated in the `coverage` directory after running tests.
+
+## 📦 Deployment
+
+When deploying to production, you can remove all test-related files using the deployment script:
+
+```bash
+# Run the deployment script
+node deploy.js
+```
+
+This will remove:
+- Test files and directories
+- Test configuration files
+- Development dependencies
+- The deployment script itself
+
+Leaving only the files needed for the production website.
+
+
 ### Frontend
 - **Bootstrap 5** - Modern CSS framework
 - **ES6+ JavaScript** - Modern JavaScript features
