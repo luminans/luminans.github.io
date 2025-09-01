@@ -1,19 +1,32 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-
-        <title>Hangul Acquisition System</title>
+        <title>Hangul Learning System</title>
 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="Hangul, Hundlism, Sejong, acquisition" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="keywords" content="Hangul, Korean, learning, pronunciation, audio" />
+        <meta name="description" content="Interactive Hangul learning system with audio pronunciation" />
+        
+        <!-- PWA Meta Tags -->
+        <meta name="theme-color" content="#4A90E2">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Hangul Learning">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="images/hundlipattern.svg">
+        <link rel="apple-touch-icon" href="images/hundlipattern.svg">
+        
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="manifest.json">
 
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/component.css" />
-        <link rel="stylesheet" type="text/css" href="css/section.css" />
-        <script src="js/modernizr.custom.js"></script>
+        <!-- Modern CSS Framework -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/modern-style.css" />
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-24C1YDPZTS"></script>
@@ -21,187 +34,256 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-24C1YDPZTS');
         </script>
     </head>
 
-    <body id="page-top" data-spy="scroll" data-target="#myNavbar" data-offset="70">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#page-top"><img src="images/hundlipattern.svg" style="height:40px;position:relative;top:-8px;"></a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#sessions">SESSIONS</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+    <body>
+        <!-- Modern Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">
+                    <img src="images/hundlipattern.svg" alt="Hangul" height="40">
+                    <span class="ms-2">한글</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lessons">Lessons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <div class="jumbotron">
-        </div>
+        <!-- Hero Section -->
+        <header class="hero-section" id="page-top">
+            <div class="container text-center">
+                <div class="hero-content">
+                    <h1 class="display-3 fw-bold text-white mb-4">
+                        <span class="hangul-text">한글</span>
+                        <br>
+                        <span class="english-text">Hangul Learning</span>
+                    </h1>
+                    <p class="lead text-white-50 mb-5">Master Korean pronunciation with interactive audio lessons</p>
+                    <div class="hero-audio-demo">
+                        <button class="btn btn-primary btn-lg me-3" onclick="playWelcomeAudio()">
+                            <i class="fas fa-volume-up me-2"></i>Listen
+                        </button>
+                        <button class="btn btn-outline-light btn-lg" onclick="startLesson()">
+                            <i class="fas fa-play me-2"></i>Start Learning
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-wave">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#fff"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#fff"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#fff"></path>
+                </svg>
+            </div>
+        </header>
 
-        <div class="container text-center">
-            <div class="row title-row">
-                <div class="col-md-12">
-                    <a class="anchor" id="sessions"></a>
-                    <h1>한글 (Hangul)</h1>
-                    <p>(Phonetic animations work on Chrome at the moment)</p>
-                    <!-- Message Banner -->
-<div style="background-color: linen; border: 3px solid darkred; margin: 4px; padding: 2px; font-weight: bold; text-align: center;">
-    Book "<a href="http://www.lulu.com/spotlight/learnhangul">한글 - Teaching Sounds</a>" is available at <a href="http://www.lulu.com/spotlight/learnhangul">lulu.com/spotlight/learnhangul</a>.
-</div>
+        <!-- Lessons Section -->
+        <section class="lessons-section py-5" id="lessons">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title">Interactive Lessons</h2>
+                        <p class="section-subtitle">Tap any lesson to begin with audio pronunciation</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="hundlism.html">
-                        <img src="images/hundlipattern.svg" height="75px">
-                    </a>
-                    <h4>HUNDLISM</h4>
-                    <p>Hundlism condenses phonetics and Hangul design into trilayered process and reality.</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="primitiveletters.html">
-                        <table align="center">
-                            <tbody style="text-align:center">
-                                <tr>
-                                    <td>
-                                        <img src="images/primitiveletters_dot.svg" style="margin: 3px;" height="35px">
-                                    </td>
-                                    <td>
-                                        <img src="images/primitiveletters_horizontal_line.svg" style="margin: 3px;" height="35px">
-                                    </td>
-                                    <td>
-                                        <img src="images/primitiveletters_vertical_line.svg" style="margin: 3px;" height="35px">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="images/primitiveletters_circle.svg" style="margin: 3px;" height="35px">
-                                    </td>
-                                    <td>
-                                        <img src="images/primitiveletters_square.svg" style="margin: 3px;" height="35px">
-                                    </td>
-                                    <td>
-                                        <img src="images/primitiveletters_triangle.svg" style="margin: 3px;" height="35px">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </a>
-                    <h4>PRIMITIVE LETTERS</h4>
-                    <p>The primitive letters compose primitive syllables with the dot, lines, and basic shapes.</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="basic_vowels.html">
-                        <img src="images/basicvowels.svg" height="75px">
-                    </a>
-                    <h4>BASIC VOWELS</h4>
-                    <p>Cooing vowel letters outline their emotional directions with a dot and line.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="basic_consonants.html">
-                        <img src="images/basicconsonants.svg" height="75px">
-                    </a>
-                    <h4>BASIC CONSONANTS</h4>
-                    <p>Tongue consonant letters outline the tongue shapes when making their sounds.</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="derived_vowels.html">
-                        <img src="images/derivedvowels.svg" height="75px">
-                    </a>
-                    <h4>DERIVED VOWELS</h4>
-                    <p>The iotized vowels with the tongue back raised add a dot or a vertical line to their base letters.</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="derived_consonants.html">
-                        <img src="images/derivedconsonants.svg" height="75px">
-                    </a>
-                    <h4>DERIVED CONSONANTS</h4>
-                    <p>Derivative consonants with stronger airflow add one or two strokes to thier base letters.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="composite_vowels.html">
-                        <img src="images/compositevowels.svg" height="75px">
-                    </a>
-                    <h4>COMPOSITE VOWELS</h4>
-                    <p>A composite vowel forms a big vowel as its sound forms a complex vowel.</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="composite_consonants.html">
-                        <img src="images/compositeconsonants.svg" height="75px">
-                    </a>
-                    <h4>COMPOSITE CONSONANTS</h4>
-                    <p>All tensed consonants put their base letters side by side.</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="hangul_wing.html">
-                        <img src="images/graduateicon.svg" height="75px">
-                    </a>
-                    <h4>HANGUL WING</h4>
-                    <p>Hangul Wing cubistically organizes simple letters in vowel and consonant tables.</p>
-                </div>
-            </div>
-        </div>
+                
+                <div class="row g-4">
+                    <!-- Lesson Cards -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="lesson-card" onclick="navigateToLesson('hundlism.html')">
+                            <div class="lesson-icon">
+                                <img src="images/hundlipattern.svg" alt="Hundlism" class="lesson-img">
+                                <button class="lesson-audio-btn" onclick="event.stopPropagation(); playLessonAudio('hundlism')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Hundlism</h4>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="container">
-            <div class="row title-row">
-                <div class="col-md-12">
-                    <a class="anchor" id="about"></a>
-                    <h1 class="text-center">한글 (HAHGUL) INVENTOR</h1>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="lesson-card" onclick="navigateToLesson('primitiveletters.html')">
+                            <div class="lesson-icon">
+                                <div class="primitive-letters-grid">
+                                    <img src="images/primitiveletters_dot.svg" alt="Dot">
+                                    <img src="images/primitiveletters_horizontal_line.svg" alt="Horizontal">
+                                    <img src="images/primitiveletters_vertical_line.svg" alt="Vertical">
+                                    <img src="images/primitiveletters_circle.svg" alt="Circle">
+                                    <img src="images/primitiveletters_square.svg" alt="Square">
+                                    <img src="images/primitiveletters_triangle.svg" alt="Triangle">
+                                </div>
+                                <button class="lesson-audio-btn" onclick="event.stopPropagation(); playLessonAudio('primitive')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Primitive Letters</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="lesson-card" onclick="navigateToLesson('basic_vowels.html')">
+                            <div class="lesson-icon">
+                                <img src="images/basicvowels.svg" alt="Basic Vowels" class="lesson-img">
+                                <button class="lesson-audio-btn" onclick="event.stopPropagation(); playLessonAudio('vowels')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Basic Vowels</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="lesson-card" onclick="navigateToLesson('basic_consonants.html')">
+                            <div class="lesson-icon">
+                                <img src="images/basicconsonants.svg" alt="Basic Consonants" class="lesson-img">
+                                <button class="lesson-audio-btn" onclick="event.stopPropagation(); playLessonAudio('consonants')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Basic Consonants</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="lesson-card" onclick="navigateToLesson('derived_vowels.html')">
+                            <div class="lesson-icon">
+                                <img src="images/derivedvowels.svg" alt="Derived Vowels" class="lesson-img">
+                                <button class="lesson-audio-btn" onclick="event.stopPropagation(); playLessonAudio('derived-vowels')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Derived Vowels</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="lesson-card" onclick="navigateToLesson('derived_consonants.html')">
+                            <div class="lesson-icon">
+                                <img src="images/derivedconsonants.svg" alt="Derived Consonants" class="lesson-img">
+                                <button class="lesson-audio-btn" onclick="event.stopPropagation(); playLessonAudio('derived-consonants')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Derived Consonants</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="lesson-card" onclick="navigateToLesson('composite_vowels.html')">
+                            <div class="lesson-icon">
+                                <img src="images/compositevowels.svg" alt="Composite Vowels" class="lesson-img">
+                                <button class="lesson-audio-btn" onclick="event.stopPropagation(); playLessonAudio('composite-vowels')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Composite Vowels</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="lesson-card" onclick="navigateToLesson('composite_consonants.html')">
+                            <div class="lesson-icon">
+                                <img src="images/compositeconsonants.svg" alt="Composite Consonants" class="lesson-img">
+                                <button class="lesson-audio-btn" onclick="event.stopPropagation(); playLessonAudio('composite-consonants')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Composite Consonants</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="lesson-card" onclick="navigateToLesson('hangul_wing.html')">
+                            <div class="lesson-icon">
+                                <img src="images/graduateicon.svg" alt="Hangul Wing" class="lesson-img">
+                                <button class="lesson-audio-btn" onclick="event.stopPropagation(); playLessonAudio('wing')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="lesson-content">
+                                <h4>Hangul Wing</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-5 text-center">
-                    <img src="images/KingSejongTheGreat.png" class="img-responsive center-block">
-                    <h4>KING SEJONG THE GREAT</h4>
-                </div>
-                <div class="col-md-7">
-                    <p class="aboutstart">Congratulations on your mastering Hangul! </p>
-                    <p>King Sejong the Great, the fourth king of Joseon-dynasty, has greatly affected Corean history with his suplerlative communication. In 1443, he invented a phonetic alphabet system originally named 훈민정음 (Hunminjeongeum) for the Corean language as well as its neighbors'. With optimally balanced geometric symbols, 훈민정음 implements the articulatory phonetics and distinctive features of Corean speech sounds completely. The specification of 훈민정음 was aligned altogether seamlessly and converged toward the scientific moves in the future phonetics. He exercised the superlative methodology in the 15th century with the utmost ingenuity and rigor, invented the phonetic writing system to resolve the national miscommunication, and thus elevated it to the superlative one unraveling the hidden codes and missing puzzles even in the 21st century.</p>
-                    <p>The Hangul acquisition method and system based on its phonetic and design principles enable a learner to effectively and efficiently master Hangul. Based on a scientific paradigm, the Hangul acquisition method formulates nested trilateral structures in Hangul. It helps the learner outline the underlying principles of Hangul succinctly and master the letter-sound mapping incrementally. In particualr, their phonetic and graphic symmetries bring synergy effects and greater efficiency in Hangul acquisition. Therefore, it will enhance four language skills of the language.</p>
-                    <p>Wishing you all the best,</p>
-                    <p><em>Taemin Kim</em></p>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div id="contact_pane" class="container-fluid">
-            <div class="row title-row">
-                <div class="col-md-12 text-center">
-                    <a class="anchor" id="contact"></a>
-                    <h1>CONTACT</h1>
-                    <p>Request more information, leave your feedback, or discuss partnerships and investment via "greatcosmo at daum dot net."</p>
+        <!-- About Section -->
+        <section class="about-section py-5" id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                        <img src="images/KingSejongTheGreat.png" alt="King Sejong" class="img-fluid rounded-3 shadow">
+                        <h4 class="mt-3">King Sejong the Great</h4>
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="section-title">The Inventor of 한글</h2>
+                        <p class="lead">King Sejong the Great invented Hangul in 1443, creating one of the most scientific writing systems ever devised.</p>
+                        <p>Hangul's design reflects the actual shape of the mouth and tongue when producing sounds, making it uniquely intuitive for learners. Each letter is a visual representation of how the sound is formed.</p>
+                        <button class="btn btn-primary" onclick="playAboutAudio()">
+                            <i class="fas fa-volume-up me-2"></i>Listen to Story
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="footer_pane" class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>Copyright &copy; 2017 Taemin Kim. All rights reserved.</p>
+        <!-- Contact Section -->
+        <section class="contact-section py-5" id="contact">
+            <div class="container text-center">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="lead mb-4">Questions, feedback, or partnership opportunities?</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope me-2"></i>greatcosmo at daum dot net</p>
+                    <p><i class="fas fa-book me-2"></i><a href="http://www.lulu.com/spotlight/learnhangul" target="_blank" class="text-decoration-none">Get the Complete Book</a></p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <!-- Footer -->
+        <footer class="footer py-4">
+            <div class="container text-center">
+                <p>&copy; 2024 Taemin Kim. All rights reserved.</p>
+            </div>
+        </footer>
 
-        <script src="js/jqBootstrapValidation.js"></script>
-        <script src="js/contact_me.js"></script>
+        <!-- Modern JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/modern-audio.js"></script>
+        <script src="js/modern-interactions.js"></script>
     </body>
 </html>

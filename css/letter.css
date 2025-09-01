@@ -33,20 +33,23 @@ svg {
     width: 200px;
     cursor:pointer;
     vertical-align: top;
+    position: relative;
     
-    background: url('/images/nasaltract.svg') center center no-repeat;
+    background: url('../images/nasaltract.svg') center center no-repeat;
     background-size: 200px auto;
     background-position: center top;
+    z-index: 1;
 }
 
 .articulatespeech {
     width: 200px;
     vertical-align: top;
+    position: relative;
     
-    background: url('/images/nasaltract.svg') center center no-repeat;
+    background: url('../images/nasaltract.svg') center center no-repeat;
     background-size: 200px auto;
     background-position: center top;
-    z-index: 99;
+    z-index: 1;
 }
 
 /* phonetic articulation in the left articulatory profile */
@@ -72,14 +75,14 @@ svg {
     stroke-linecap:round;
     stroke-linejoin:round;
 
-    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%),  url('/images/hundlipattern.svg') center center no-repeat;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%),  url('../images/hundlipattern.svg') center center no-repeat;
     background-size: 150px 150px;
 }
 
 .hundlibackground {
     height:120px;
 
-    background: url('/images/hundlipattern.svg') center center no-repeat;
+    background: url('../images/hundlipattern.svg') center center no-repeat;
     background-size: 120px 120px;
 }
 
@@ -88,12 +91,15 @@ svg {
     width: 150px;
     height: 150px;
 
-    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%),  url('/images/hundlipattern.svg') center center no-repeat;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%),  url('../images/hundlipattern.svg') center center no-repeat;
     background-size: 150px 150px;
 }
 
 #closingthroatysound {
     width: 200px;
-    background: url('/images/nasaltract.svg') center center no-repeat, url('/images/speech80.svg') center center no-repeat;
+    height: 150px;
+    background: url('../images/nasaltract.svg') center center no-repeat, url('../images/speech80.svg') center center no-repeat;
     background-size: 200px auto;
+    position: relative;
+    display: block;
 }
