@@ -1,0 +1,449 @@
+/* Lesson-specific styles for Hangul Learning */
+
+/* Lesson Header */
+.lesson-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.lesson-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="lessonGrain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23lessonGrain)"/></svg>');
+    opacity: 0.3;
+}
+
+.lesson-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.lesson-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Vowel Cards */
+.vowel-section {
+    background: var(--light-bg);
+}
+
+.vowel-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+/* Pictographic Table Styles */
+.pictographic-table {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.table-header {
+    margin-bottom: 20px;
+}
+
+.vowel-large {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Letter Formation Card Styles */
+.letter-formation-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.vowel-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.vowel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.vowel-card:hover::before {
+    transform: scaleX(1);
+}
+
+.vowel-character {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.vowel-card:hover .vowel-character {
+    transform: scale(1.2);
+}
+
+.vowel-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.vowel-info p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.vowel-animation {
+    margin-top: 1rem;
+}
+
+.mouth-diagram {
+    max-width: 80px;
+    height: auto;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.vowel-card:hover .mouth-diagram {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Practice Section */
+.practice-section {
+    background: white;
+}
+
+.practice-card {
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    height: 100%;
+    text-align: center;
+}
+
+.practice-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.vowel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.vowel-btn {
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vowel-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+.vowel-btn:active {
+    transform: scale(0.95);
+}
+
+.mouth-guide {
+    margin-bottom: 1.5rem;
+}
+
+.guide-image {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+}
+
+/* Syllable Section */
+.syllable-section {
+    background: var(--light-bg);
+}
+
+.syllable-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    height: 100%;
+}
+
+.syllable-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.syllable-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.syllable-item {
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.syllable-item:hover {
+    background: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.syllable {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Lesson Footer */
+.lesson-footer {
+    background: var(--dark-bg);
+    color: white;
+}
+
+.lesson-footer .btn {
+    min-width: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lesson-title {
+        font-size: 2.5rem;
+    }
+    
+    .lesson-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .vowel-character {
+        font-size: 3rem;
+    }
+    
+    .vowel-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .syllable-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vowel-btn {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .syllable {
+        font-size: 1.5rem;
+    }
+    
+    .lesson-footer .btn {
+        min-width: auto;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .lesson-header {
+        padding: 100px 0 60px;
+    }
+    
+    .lesson-title {
+        font-size: 2rem;
+    }
+    
+    .vowel-card {
+        padding: 1.5rem;
+    }
+    
+    .vowel-character {
+        font-size: 2.5rem;
+    }
+    
+    .practice-card,
+    .syllable-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Animation Classes */
+.vowel-card.animate-in {
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+.practice-card.animate-in {
+    animation: slideInUp 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.syllable-card.animate-in {
+    animation: slideInUp 0.6s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Audio Visualizer for Lesson */
+.lesson-audio-visualizer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    z-index: 1000;
+    display: none;
+}
+
+.lesson-audio-visualizer.active {
+    display: block;
+}
+
+/* Progress Indicator */
+.lesson-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1001;
+}
+
+.lesson-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+/* Touch Feedback */
+@media (hover: none) and (pointer: coarse) {
+    .vowel-card:active {
+        transform: scale(0.98);
+    }
+    
+    .vowel-btn:active {
+        transform: scale(0.9);
+    }
+    
+    .syllable-item:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Accessibility */
+.vowel-card:focus,
+.vowel-btn:focus,
+.syllable-item:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .vowel-card {
+        border: 2px solid var(--text-primary);
+    }
+    
+    .vowel-btn {
+        border: 2px solid var(--text-primary);
+    }
+    
+    .syllable-item {
+        border: 2px solid var(--text-primary);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .vowel-card,
+    .vowel-btn,
+    .syllable-item {
+        transition: none;
+    }
+    
+    .vowel-card:hover,
+    .vowel-btn:hover,
+    .syllable-item:hover {
+        transform: none;
+    }
+}

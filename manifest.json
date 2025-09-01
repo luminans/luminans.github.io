@@ -1,0 +1,72 @@
+{
+  "name": "Hangul Learning System",
+  "short_name": "Hangul",
+  "description": "Interactive Korean Hangul learning system with audio pronunciation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4A90E2",
+  "theme_color": "#4A90E2",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "images/hundlipattern.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/hundlipattern.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "images/hundlipattern.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["education", "language"],
+  "screenshots": [
+    {
+      "src": "images/rosettastone4hangul1hour.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Basic Vowels",
+      "short_name": "Vowels",
+      "description": "Learn basic Korean vowels",
+      "url": "/basic_vowels.html",
+      "icons": [
+        {
+          "src": "images/basicvowels.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Basic Consonants",
+      "short_name": "Consonants",
+      "description": "Learn basic Korean consonants",
+      "url": "/basic_consonants.html",
+      "icons": [
+        {
+          "src": "images/basicconsonants.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
