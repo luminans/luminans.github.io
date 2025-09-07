@@ -5,10 +5,10 @@ function initialize(svg) {
     var delay = 0, speed = 0.2, duration = 0,
         paths = $('path', svg), length;
     Array.from(paths).forEach(function (path) {
-        delay += duration + 100;
         length = path.getTotalLength();
         duration = length / speed;
         $(path).css('transition', 'none').attr('data-duration', duration).attr('data-delay', delay).attr('stroke-dashoffset', length).attr('stroke-dasharray', length + ',' + length);
+        delay += duration + 100;
     });
 }
 

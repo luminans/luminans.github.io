@@ -134,24 +134,31 @@ class InteractionManager {
     }
 
     setupAnimations() {
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Check if IntersectionObserver is available
+        if (typeof IntersectionObserver !== 'undefined') {
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.lesson-card, .section-title, .about-section img').forEach(el => {
+                observer.observe(el);
             });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.lesson-card, .section-title, .about-section img').forEach(el => {
-            observer.observe(el);
-        });
+        } else {
+            // Fallback for browsers without IntersectionObserver
+            this.animateOnScroll();
+            window.addEventListener('scroll', () => this.animateOnScroll());
+        }
     }
 
     animateOnScroll() {
@@ -241,20 +248,30 @@ class InteractionManager {
     }
 
     setupLazyLoading() {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
+        if (typeof IntersectionObserver !== 'undefined') {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        } else {
+            // Fallback: load all lazy images immediately
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                if (img.dataset && img.dataset.src) {
                     img.src = img.dataset.src;
                     img.classList.remove('lazy');
-                    observer.unobserve(img);
                 }
             });
-        });
-
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-        });
+        }
     }
 }
 
@@ -526,7 +543,16 @@ const additionalStyles = `
     }
 `;
 
-// Inject additional styles
-const styleSheet = document.createElement('style');
-styleSheet.textContent = additionalStyles;
-document.head.appendChild(styleSheet);
+// Inject additional styles (only if not in test environment)
+if (typeof global === 'undefined' || !global.document) {
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = additionalStyles;
+    document.head.appendChild(styleSheet);
+}
+
+// Export classes to global scope for testing
+if (typeof global !== 'undefined') {
+    global.InteractionManager = InteractionManager;
+    global.LessonCardManager = LessonCardManager;
+    global.ProgressManager = ProgressManager;
+}

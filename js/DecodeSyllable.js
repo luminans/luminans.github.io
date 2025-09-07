@@ -1,6 +1,15 @@
 /*jslint browser: true*/
 /*global $, Hangul, renderSound, renderSpeech, insertPaths4Syllable, speak*/
 
+// For Node.js environment in tests
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    isHangul: isHangul,
+    char2syllable: char2syllable,
+    code2syllable: code2syllable
+  };
+}
+
 var HANGUL_OFFSET = 0xAC00,
     OPENING = [
         'ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ',
