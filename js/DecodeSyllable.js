@@ -272,4 +272,18 @@ $(document).ready(function(){
         renderSpeech(this, syllable[0], syllable[1], syllable[2]);
         if (svg !== null) { insertPaths4Syllable(svg, syllable[0], syllable[1], syllable[2]); }
     });
+    
+    $(".articulatespeech").click(function() {
+        var container = $(this).closest(".col-md-6"),
+            syltab = container.find(".syltab").last(),
+            svg = container.find(".letterformation")[0];
+        
+        if (syltab.length > 0) {
+            var char = syltab.text().charCodeAt(0),
+                syllable = char2syllable(char);
+            renderSound(syllable[0], syllable[1], syllable[2]);
+            renderSpeech(this, syllable[0], syllable[1], syllable[2]);
+            if (svg !== null) { insertPaths4Syllable(svg, syllable[0], syllable[1], syllable[2]); }
+        }
+    });
 });

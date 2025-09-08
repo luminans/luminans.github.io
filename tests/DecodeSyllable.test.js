@@ -201,6 +201,13 @@ describe('DecodeSyllable Module', () => {
       const articulateCalls = calls.filter(call => call[0] === '.articulate');
       expect(articulateCalls.length).toBeGreaterThan(0);
     });
+
+    test('should set up click handlers for .articulatespeech elements', () => {
+      // The module should have called $(".articulatespeech").click() during loading
+      const calls = global.$.mock.calls;
+      const articulatespeechCalls = calls.filter(call => call[0] === '.articulatespeech');
+      expect(articulatespeechCalls.length).toBeGreaterThan(0);
+    });
   });
 
   describe('Integration tests', () => {
