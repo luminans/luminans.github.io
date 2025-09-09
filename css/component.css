@@ -9,9 +9,9 @@
 .article h2 {
     margin: 1em 0;
     font-size: 2em;
-    border-bottom: 3px solid #f5bca8;
+    border-bottom: 3px solid #4A90E2;
     padding-bottom: .3em;
-    color: #f5bca8;
+    color: #4A90E2;
 }
 
 .article p {
@@ -32,7 +32,7 @@
 
 .figure {
     padding: 0.9em;
-    border: 3px solid #f5bca8;
+    border: 3px solid #4A90E2;
     background: #fff;
     margin: 0 auto 1em;
 }
@@ -51,7 +51,7 @@
     padding: .5em;
     text-align: center;
     color: #fff;
-    background: #f5bca8;
+    background: #4A90E2;
     counter-increment: figures;
 }
 

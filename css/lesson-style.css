@@ -39,7 +39,8 @@
 
 /* Vowel Cards */
 .vowel-section {
-    background: var(--light-bg);
+    background: rgba(248, 249, 250, 0.9);
+    backdrop-filter: blur(10px);
 }
 
 .vowel-card {

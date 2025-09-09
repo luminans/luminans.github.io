@@ -11,7 +11,24 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #958c88;
-	background: #fcf2ee;
+	background: linear-gradient(135deg, #4A90E2, #2C3E50);
+	min-height: 100vh;
+}
+
+/* Main content container styling for better readability */
+.container {
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 12px;
+	padding: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Article container specific styling */
+.article .container {
+	background: rgba(255, 255, 255, 0.98);
+	margin-top: 80px; /* Account for fixed navbar */
 }
 
 a {
@@ -38,7 +55,7 @@ a:hover {
     padding: .5em;
     text-align: center;
     color: #fff;
-    background: #f5bca8;
+    background: #4A90E2;
     counter-increment: figures;
 }
 
@@ -78,12 +95,12 @@ table td.crossed
 
 td.diagonalRising
 {
-	background: linear-gradient(to right bottom, #fcf2ee 0%,#fcf2ee 49%,#dddddd 50%,#dddddd 51%,#fcf2ee 51.1%,#fcf2ee 100%);
+	background: linear-gradient(to right bottom, #ffffff 0%,#ffffff 49%,#dddddd 50%,#dddddd 51%,#ffffff 51.1%,#ffffff 100%);
 }
 
 td.diagonalFalling
 {
-	background: linear-gradient(to right top, #fcf2ee 0%,#fcf2ee 49%,#dddddd 50%,#dddddd 51%,#fcf2ee 51.1%,#fcf2ee 100%);
+	background: linear-gradient(to right top, #ffffff 0%,#ffffff 49%,#dddddd 50%,#dddddd 51%,#ffffff 51.1%,#ffffff 100%);
 }
 
 td.diagonalCross
