@@ -108,10 +108,9 @@ function insertPaths4Syllable(svg, opening, lasting, closing) {
         svg.appendChild(subpath);
     });
 
-    initialize(svg);
+    window.writing.initialize.call(svg);
     
-    //    window.writing.initialize();
     setTimeout(function() {
-            animate(svg);
+            window.writing.animate.call(svg);
     }, 1); // Delay 1ms. Otherwise, the last subpath is not animated.
 }
